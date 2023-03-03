@@ -5,6 +5,17 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Compile Remove="Brokers\Loggings\**" />
+    <Compile Remove="Controllers\**" />
+    <Content Remove="Brokers\Loggings\**" />
+    <Content Remove="Controllers\**" />
+    <EmbeddedResource Remove="Brokers\Loggings\**" />
+    <EmbeddedResource Remove="Controllers\**" />
+    <None Remove="Brokers\Loggings\**" />
+    <None Remove="Controllers\**" />
+  </ItemGroup>
+
+  <ItemGroup>
     <PackageReference Include="EFxceptions" Version="0.4.5" />
     <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="7.0.3">
       <PrivateAssets>all</PrivateAssets>
@@ -20,9 +31,8 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Brokers\Loggings\" />
-    <Folder Include="Controllers\" />
-    <Folder Include="Services\" />
+    <Folder Include="Services\Groups\" />
+    <Folder Include="Services\Students\" />
   </ItemGroup>
 
 </Project>

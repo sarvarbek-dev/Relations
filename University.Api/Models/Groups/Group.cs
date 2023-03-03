@@ -9,6 +9,6 @@ namespace University.Api.Models.Groups
         public Guid Id { get; set; }
         public string Name { get; set; }
 
-        public IEnumerable<Student> Students { get; set; }
+        public IEnumerable<StudentModel> Students { get; set; }
     }
 }

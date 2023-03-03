@@ -8,21 +8,21 @@ namespace University.Api.Brokers.Storages
 {
     public partial class StorageBroker
     {
-        public DbSet<Student> Students { get; set; }
+        public DbSet<StudentModel> Students { get; set; }
 
-        public async ValueTask<Student> InsertStudentAsync(Student student) =>
+        public async ValueTask<StudentModel> InsertStudentAsync(StudentModel student) =>
             await InsertAsync(student);
 
-        public IQueryable<Student> SelectAllStudents() =>
-            SelectAll<Student>();
+        public IQueryable<StudentModel> SelectAllStudents() =>
+            SelectAll<StudentModel>();
 
-        public async ValueTask<Student> SelectStudentByIdAsync(Guid id) =>
-            await SelectAsync<Student>(id);
+        public async ValueTask<StudentModel> SelectStudentByIdAsync(Guid id) =>
+            await SelectAsync<StudentModel>(id);
 
-        public async ValueTask<Student> UpdateStudentAsync(Student student) =>
+        public async ValueTask<StudentModel> UpdateStudentAsync(StudentModel student) =>
             await UpdateAsync(student);
 
-        public async ValueTask<Student> DeleteStudentAsync(Student student) =>
-            await DeleteAsync<Student>(student);
+        public async ValueTask<StudentModel> DeleteStudentAsync(StudentModel student) =>
+            await DeleteAsync<StudentModel>(student);
     }
 }

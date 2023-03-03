@@ -7,10 +7,10 @@ namespace University.Api.Brokers.Storages
 {
     public partial interface IStorageBroker
     {
-        ValueTask<Student> InsertStudentAsync(Student student);
-        IQueryable<Student> SelectAllStudents();
-        ValueTask<Student> SelectStudentByIdAsync(Guid id); 
-        ValueTask<Student> UpdateStudentAsync(Student student);
-        ValueTask<Student> DeleteStudentAsync(Student student);       
+        ValueTask<StudentModel> InsertStudentAsync(StudentModel student);
+        IQueryable<StudentModel> SelectAllStudents();
+        ValueTask<StudentModel> SelectStudentByIdAsync(Guid id); 
+        ValueTask<StudentModel> UpdateStudentAsync(StudentModel student);
+        ValueTask<StudentModel> DeleteStudentAsync(StudentModel student);       
     }
 }

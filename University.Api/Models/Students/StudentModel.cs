@@ -3,7 +3,7 @@ using University.Api.Models.Groups;
 
 namespace University.Api.Models.Student
 {
-    public class Student
+    public class StudentModel
     {
         public Guid Id { get; set; }
         public string FirstName { get; set; }

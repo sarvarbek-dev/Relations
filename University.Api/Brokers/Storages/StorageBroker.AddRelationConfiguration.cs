@@ -8,10 +8,10 @@ namespace University.Api.Brokers.Storages
     {
         private static void AddRelationConfiguration(ModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Student>()
+            modelBuilder.Entity<StudentModel>()
                 .HasOne<Group>(s => s.Group)
                 .WithMany(g => g.Students)
-                .HasForeignKey(s => s.StudentId);                
+                .HasForeignKey(g => g.GroupId);                
         }
     }
 }

@@ -1,9 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using System.Linq;
 using System;
-using System.Text.RegularExpressions;
+using System.Linq;
 using System.Threading.Tasks;
-using University.Api.Models.Student;
+using University.Api.Models.Groups;
 
 namespace University.Api.Brokers.Storages
 {
@@ -17,7 +16,7 @@ namespace University.Api.Brokers.Storages
         public IQueryable<Group> SelectAllGroups() =>
             SelectAll<Group>();
 
-        public async ValueTask<Group> (Guid id) =>
+        public async ValueTask<Group> SelectGroupByIdAsync(Guid id) =>
             await SelectAsync<Group>(id);
 
         public async ValueTask<Group> UpdateGroupAsync(Group group) =>
