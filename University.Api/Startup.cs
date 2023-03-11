@@ -11,7 +11,9 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using University.Api.Brokers.Loggings;
 using University.Api.Brokers.Storages;
+using University.Api.Services.Students;
 
 namespace University.Api
 {
@@ -30,6 +32,9 @@ namespace University.Api
 
             services.AddControllers();
             services.AddTransient<IStorageBroker, StorageBroker>();
+            services.AddTransient<ILoggingBroker, LoggingBroker>();
+            services.AddTransient<IStudentService, StudentService>();
+
             services.AddSwaggerGen(c =>
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "University.Api", Version = "v1" });

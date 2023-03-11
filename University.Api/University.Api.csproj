@@ -5,13 +5,9 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Brokers\Loggings\**" />
     <Compile Remove="Controllers\**" />
-    <Content Remove="Brokers\Loggings\**" />
     <Content Remove="Controllers\**" />
-    <EmbeddedResource Remove="Brokers\Loggings\**" />
     <EmbeddedResource Remove="Controllers\**" />
-    <None Remove="Brokers\Loggings\**" />
     <None Remove="Controllers\**" />
   </ItemGroup>
 
@@ -32,7 +28,6 @@
 
   <ItemGroup>
     <Folder Include="Services\Groups\" />
-    <Folder Include="Services\Students\" />
   </ItemGroup>
 
 </Project>
